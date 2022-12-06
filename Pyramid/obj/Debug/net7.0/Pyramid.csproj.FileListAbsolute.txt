@@ -1,0 +1,15 @@
+G:\Sources\Pyramid\Pyramid\bin\Debug\net7.0\Pyramid.exe
+G:\Sources\Pyramid\Pyramid\bin\Debug\net7.0\Pyramid.deps.json
+G:\Sources\Pyramid\Pyramid\bin\Debug\net7.0\Pyramid.runtimeconfig.json
+G:\Sources\Pyramid\Pyramid\bin\Debug\net7.0\Pyramid.dll
+G:\Sources\Pyramid\Pyramid\bin\Debug\net7.0\Pyramid.pdb
+G:\Sources\Pyramid\Pyramid\obj\Debug\net7.0\Pyramid.csproj.AssemblyReference.cache
+G:\Sources\Pyramid\Pyramid\obj\Debug\net7.0\Pyramid.GeneratedMSBuildEditorConfig.editorconfig
+G:\Sources\Pyramid\Pyramid\obj\Debug\net7.0\Pyramid.AssemblyInfoInputs.cache
+G:\Sources\Pyramid\Pyramid\obj\Debug\net7.0\Pyramid.AssemblyInfo.cs
+G:\Sources\Pyramid\Pyramid\obj\Debug\net7.0\Pyramid.csproj.CoreCompileInputs.cache
+G:\Sources\Pyramid\Pyramid\obj\Debug\net7.0\Pyramid.dll
+G:\Sources\Pyramid\Pyramid\obj\Debug\net7.0\refint\Pyramid.dll
+G:\Sources\Pyramid\Pyramid\obj\Debug\net7.0\Pyramid.pdb
+G:\Sources\Pyramid\Pyramid\obj\Debug\net7.0\Pyramid.genruntimeconfig.cache
+G:\Sources\Pyramid\Pyramid\obj\Debug\net7.0\ref\Pyramid.dll
