@@ -26,25 +26,41 @@ static void Main(string[] args)
 
 static void DoStep(int x, int y, int stepX = 0, int stepY = 0)
 {
-    if(stepX < x)
+    if (stepX < x)
     {
-        if (stepY == 0 || stepY == (y) || stepX == 0 || stepX == (x - 1))
-        {
-            Console.Write("o");
-        }
-        else
-        {
-            Console.Write("-");         
-        }
-
-        DoStep(x, y, stepX + 1, stepY);   
+        DoLine(x, y, stepX, stepY);
     }
     else if (stepX == x && stepY < y)
     {
-        Console.Write("\r\n");
-        DoStep(x, y, 0, stepY + 1);
+        DoColumn(x, y, stepX, stepY);
     }
-    else {
-        Console.WriteLine("\r\nDone!");
-    }    
+    else
+    {
+        DoStop();
+    }
+}
+
+static void DoLine(int x, int y, int stepX = 0, int stepY = 0)
+{
+    if (stepY == 0 || stepY == (y) || stepX == 0 || stepX == (x - 1))
+    {
+        Console.Write("o");
+    }
+    else
+    {
+        Console.Write("-");
+    }
+
+    DoStep(x, y, stepX + 1, stepY);
+}
+
+static void DoColumn(int x, int y, int stepX = 0, int stepY = 0)
+{
+    Console.Write("\r\n");
+    DoStep(x, y, 0, stepY + 1);
+}
+
+static void DoStop()
+{
+    Console.WriteLine("\r\nDone!");
 }
