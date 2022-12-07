@@ -1,27 +1,50 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-WriteLine("Hell'3, w0rld!");
+Main(args);
 
-static string ToBinaryString(int value)
+static void Main(string[] args)
 {
-    return Convert.ToString(value, toBase: 2).PadLeft(8, '0');
+    Console.WriteLine($"Hell'O, w0rld!");
+    Console.WriteLine($"Ma carte postale de pyramide.");
+    Console.WriteLine();
+    Console.WriteLine($"Colonnes : {args[0]}");
+    Console.WriteLine($"Lignes   : {args[1]}");
+    Console.WriteLine();
+
+    try
+    {
+        int x = Int32.Parse(args[0]);
+        int y = Int32.Parse(args[1]);
+
+        DoStep(x, y);
+    }
+    catch (FormatException)
+    {
+        Console.WriteLine($"Unable to parse '{args}'");
+    }
 }
 
-// Définition d'une fonction
-void MainProgram()
+static void DoStep(int x, int y, int stepX = 0, int stepY = 0)
 {
-    int a = 11;
-    int b = 6;
+    if(stepX < x)
+    {
+        if (stepY == 0 || stepY == (y) || stepX == 0 || stepX == (x - 1))
+        {
+            Console.Write("o");
+        }
+        else
+        {
+            Console.Write("-");         
+        }
 
-    WriteLine($"a = {a}");
-    WriteLine($"b = {b}");
-    WriteLine($"bin(a): {ToBinaryString(a)}");
-    WriteLine($"bin(b): {ToBinaryString(b)}");
-    WriteLine($"a & b = {a & b}"); // 2-bit column only e.g. 00000010
-    WriteLine($"a | b = {a | b}"); // 8, 4, and 2-bit columns e.g. 00001110
-    WriteLine($"a ^ b = {a ^ b}"); // 8 and 4-bit columns e.g. 00001100
+        DoStep(x, y, stepX + 1, stepY);   
+    }
+    else if (stepX == x && stepY < y)
+    {
+        Console.Write("\r\n");
+        DoStep(x, y, 0, stepY + 1);
+    }
+    else {
+        Console.WriteLine("\r\nDone!");
+    }    
 }
-
-WriteLine("The main program...");
-MainProgram();
-WriteLine("Done!");

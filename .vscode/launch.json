@@ -10,9 +10,9 @@
             "request": "launch",
             "preLaunchTask": "build",
             "program": "${workspaceFolder}/Pyramid/bin/Debug/net7.0/Pyramid.dll",
-            "args": [],
+            "args": ["80", "20"],
             "cwd": "${workspaceFolder}/Pyramid",
-            "console": "internalConsole",
+            "console": "integratedTerminal",
             "stopAtEntry": false
         },
         {
